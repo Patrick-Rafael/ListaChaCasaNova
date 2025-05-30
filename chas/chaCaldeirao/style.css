@@ -1,0 +1,251 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+.mainContainer {
+    width: 70%;
+    margin: 40px;
+}
+.container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.madeBy {
+    font-size: 0.7em;
+    color: gray;
+    text-align: right;
+}
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    margin-bottom: 0px;
+    text-align: center;
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1em;
+    margin: 10px 0 20px 0;
+    color: gray;
+    text-align: center;
+}
+h3 {
+    font-size: 1em;
+    color: #757474;
+    font-weight: bold;
+    /* color: #4d4c4c; */
+    /* font-weight: 500; */
+    text-align: left;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+.listContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list {
+    width: 50%;
+    margin-right: 20px;
+    flex: 1 1 200px;
+}
+
+
+
+
+.floatingButton {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #ff7f7f; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.floatingButton i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.floatingButton:hover {  
+    background-color: #ff4d4d; 
+}
+
+.copyContainer {
+    background-color: #f1f1f1;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    width: 88%;
+}
+
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 320px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: gray;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: salmon;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: none;
+    color: salmon;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: rgb(233, 95, 82);
+}
+
+.input-field {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal p {
+    text-align: justify;
+}
+
+.textSecondary {
+    color: gray;
+    font-size: 12px;
+}
+
+.present-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.present-list li {
+    color: rgba(0, 0, 0, 0.9);
+    background: hsla(0, 0%, 95%, 0.5);
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d9534f"><path d="M20 7h-3.17a3 3 0 0 0-5.66-2 3 3 0 1 0-5.66 2H2v2h2v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9h2zm-7.83-2a1 1 0 0 1 1.83.6V7h-2.83a1 1 0 0 1 1-2zm-6 0a1 1 0 0 1 1 2H5.83v-1.4a1 1 0 0 1 1.83-.6zM6 9h5v10H6zm7 10V9h5v10z"/></svg>') no-repeat center;
+    background-size: contain;
+    margin-right: 8px;
+}
+
+
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    .promissedContainer {
+        margin-top: 40px;
+    }
+    
+    #promisedList > li > label {
+        color: gray;
+    }
+
+    .mainContainer {
+        width: 100%;
+        margin: 20px;
+    }
+}

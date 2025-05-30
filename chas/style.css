@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+  background-color: #f8f4f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  margin-bottom: 0px;
+  text-align: center;
+}
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+  margin: 10px 0 20px 0;
+  color: gray;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.button {
+  background-color: salmon;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  font-size: 18px; 
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #FF4F3A; 
+  transform: translateY(-5px); 
+}
+
+.button:active {
+  transform: translateY(2px); 
+}
+  
+  
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2em;
+  }
+  
+  h2 {
+      font-size: 1.3em;
+  }
+  
+  .button {
+    width: calc(100% - 60px); 
+    margin: 0 30px; 
+    font-size: 14px; 
+  }
+
+  .event-description {
+    margin: 5px 40px; 
+  }
+}
+
+.event-description {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}

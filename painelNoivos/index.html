@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B & V - Lista de Presentes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container">
+            <h1>Painel dos Noivos</h1>
+            <h2>Breno & Walleska</h2>
+                
+            <div class="tabs">
+                <button class="tab active" onclick="showGifts('casamento', this)">Casamento</button>
+            </div>
+            <div class="gift-list" id="giftList"></div>
+        </div>
+        <p class="madeBy">Feito por Patrick Rafael</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="../sendEmail.js"></script>
+    <script src="../data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

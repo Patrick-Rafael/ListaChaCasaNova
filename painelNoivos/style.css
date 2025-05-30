@@ -1,0 +1,155 @@
+/* BASE */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+.mainContainer {
+    width: 70%;
+    margin: 40px;
+}
+.container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.madeBy {
+    font-size: 0.7em;
+    color: gray;
+    text-align: right;
+}
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    margin-bottom: 0px;
+    text-align: center;
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+    margin: 10px 0 20px 0;
+    color: gray;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+.listContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list {
+    width: 50%;
+    margin-right: 20px;
+    flex: 1 1 200px;
+}
+
+
+/* ESPECIFICOS */
+
+h3 {
+    font-size: 1em;
+    color: #5f7342;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #aab78a;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tab.active {
+    background-color: #5f7342;
+}
+
+.gift-list {
+    margin: 0 auto;
+    padding: 20px;
+}
+.gift-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #aab78a;
+}
+
+.progress-container {
+  width: 95%;
+  height: 10px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.progress-bar-label {
+    color: gray;
+    font-size: 14px;
+}
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    .promissedContainer {
+        margin-top: 40px;
+    }
+    
+    #promisedList > li > label {
+        color: gray;
+    }
+
+    .mainContainer {
+        width: 98%;
+        margin: 20px;
+    }
+
+    .gift-list {
+        padding: 0;
+    }
+}

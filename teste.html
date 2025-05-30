@@ -1,0 +1,42 @@
+<div>
+    <h3 style="margin-top: 40px;">Vaquinha para a nossa Lua de Mel</h3>
+    <div>
+        <span id="progressBarLabel" class="progress-bar-label">R$0,00 de R$2600,00</span>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+    </div>
+    <input id="inputTravelHelp" type="number" class="input-field" placeholder="R$">
+
+    <div style="margin-top: 20px;">
+        <span id="pixKey">00000000-0000-0000-0000-000000000000</span>
+        <button onclick="copyPixKey()" class="copy-button">Copiar</button>
+    </div>
+</div>
+
+<script>
+    function copyPixKey() {
+        const pixKey = document.getElementById("pixKey").innerText;
+        navigator.clipboard.writeText(pixKey).then(() => {
+            alert("Chave Pix copiada!");
+        }).catch(err => {
+            console.error("Erro ao copiar chave Pix:", err);
+        });
+    }
+</script>
+
+<style>
+    .copy-button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .copy-button:hover {
+        background-color: #0056b3;
+    }
+</style>
