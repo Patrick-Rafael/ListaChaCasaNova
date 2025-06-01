@@ -37,7 +37,7 @@ async function getPresents(isPromised) {
         .orderBy('createdAt', 'asc')
         .get()
         .then((querySnapshot) => {
-            if (!querySnapshot.empty) 
+            if (!querySnapshot.empty)
                 querySnapshot.forEach((doc) => presents.push(doc.data().name));
         }).catch(error => console.error("Erro ao buscar presentes:", error));
     return presents;
@@ -63,7 +63,7 @@ function listenEvents() {
     const checkboxes = document.querySelectorAll(".availablePresentCheck");
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", function () {
-            if(checkbox.checked) {
+            if (checkbox.checked) {
                 choosedPresent.push(this.value);
             } else {
                 const index = choosedPresent.indexOf(this.value);
@@ -81,7 +81,7 @@ function listenEvents() {
 async function setListValues() {
     availableList = await getPresents(false);
     document.getElementById('availableList').innerHTML = '';
-    if(availableList.length > 0) {
+    if (availableList.length > 0) {
         availableList.forEach(present => {
             document.getElementById('availableList').innerHTML += `
                 <li>
@@ -94,13 +94,13 @@ async function setListValues() {
         document.getElementById('promisedList').innerHTML += `
             <p>Todos os presentes que sugerimos já foram escolhidos! 🎉🥳</p>
             <p>Mas fique a vontade pra nos ajudar com o que desejar.</p>
-        `;      
+        `;
     }
 
-    
+
     promisedList = await getPresents(true);
     document.getElementById('promisedList').innerHTML = '';
-    if(promisedList.length > 0) {
+    if (promisedList.length > 0) {
         promisedList.forEach(present => {
             document.getElementById('promisedList').innerHTML += `
                 <li>
@@ -112,13 +112,13 @@ async function setListValues() {
     } else {
         document.getElementById('promisedList').innerHTML += `
             <p>Ainda não temos nenhum presente... Você pode ser o primeiro!</p>
-        `;        
+        `;
     }
 }
 
 async function openPromissePresentModal() {
     const hasChecked = document.querySelector(`#availableList .availablePresentCheck:checked`) !== null;
-    if(hasChecked) {
+    if (hasChecked) {
         document.getElementById("promissePresentModal").style.display = "flex";
         document.getElementById("promissedPresent").innerHTML = '';
         choosedPresent.forEach(present => {

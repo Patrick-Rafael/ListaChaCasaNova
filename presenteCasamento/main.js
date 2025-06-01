@@ -153,9 +153,7 @@ function listenEvents() {
   document
     .getElementById("choosePresentButton")
     .addEventListener("click", openPromissePresentModal);
-  document
-    .querySelectorAll(".pixKeyContainer")
-    .forEach((elem) => elem.addEventListener("click", copyPixKey));
+  document.getElementById('pixKeyContainer').addEventListener('click', copyPixKey);
 }
 
 async function setListValues() {
